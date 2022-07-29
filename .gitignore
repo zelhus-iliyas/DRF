@@ -1,0 +1,5 @@
+pizza-api/authapp/__pycache__/
+pizza-api/orders/__pycache__/
+pizza-api/pizza/__pycache__/
+pizza-api/env/
+pizza-api/.env
