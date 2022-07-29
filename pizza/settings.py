@@ -1,4 +1,5 @@
 from datetime import timedelta
+import os
 from pathlib import Path
 from decouple import config
 import dj_database_url
@@ -38,6 +39,8 @@ INSTALLED_APPS = [
     'phonenumber_field',
     'djoser',
     'drf_yasg',
+    'bootstrap5',
+
 
 
 ]
@@ -58,7 +61,7 @@ ROOT_URLCONF = 'pizza.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, "templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -121,7 +124,7 @@ USE_TZ = True
 
 
 STATIC_URL = 'static/'
-STATIC_ROOT=BASE_DIR / 'staticfiles'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 

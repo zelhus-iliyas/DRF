@@ -1,11 +1,12 @@
+from django.shortcuts import render
 from rest_framework import generics, status
 from rest_framework.response import Response
 from .models import User
 from .serializers import *
 from drf_yasg.utils import swagger_auto_schema
-class HelloWorldView(generics.GenericAPIView):
-    def get(self, request):
-      return Response(data={"message": "Hello World!"}, status=status.HTTP_200_OK)
+
+def HelloWorldView(request):
+      return render(request,'home.html')
 
 
 class UserCreateView(generics.GenericAPIView):
