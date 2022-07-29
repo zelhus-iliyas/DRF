@@ -3,3 +3,4 @@ pizza-api/orders/__pycache__/
 pizza-api/pizza/__pycache__/
 pizza-api/env/
 pizza-api/.env
+pizza-api/db.sqlite3
