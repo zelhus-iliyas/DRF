@@ -1,6 +1,6 @@
-pizza-api/authapp/__pycache__/
-pizza-api/orders/__pycache__/
-pizza-api/pizza/__pycache__/
-pizza-api/env/
-pizza-api/.env
-pizza-api/db.sqlite3
+authapp/__pycache__/
+orders/__pycache__/
+pizza/__pycache__/
+env/
+.env
+db.sqlite3
