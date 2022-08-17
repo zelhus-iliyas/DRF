@@ -13,11 +13,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = "Qa1wer159@QJHBJDjfrehbHGVGH"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', cast=bool)
-
+DEBUG = False
 ALLOWED_HOSTS = ['*']
 
 
@@ -79,18 +78,24 @@ WSGI_APPLICATION = 'pizza.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
-DATABASES = {}
-if DEBUG:
-    DATABASES['default'] = {
+DATABASES = {
+    'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
-else:
-    DATABASES['default'] = dj_database_url.config(
-        conn_max_age=600, ssl_require=True)
-    DATABASES['default'] = dj_database_url.config(
-        default=config('DATABASE_URL'))
+}
+
+# DATABASES = {}
+# if DEBUG:
+#     DATABASES['default'] = {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# else:
+#     DATABASES['default'] = dj_database_url.config(
+#         conn_max_age=600, ssl_require=True)
+#     DATABASES['default'] = dj_database_url.config(
+#         default=config('DATABASE_URL'))
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -159,3 +164,4 @@ SWAGGER_SETTINGS = {
         }
     }
 }
+CSRF_TRUSTED_ORIGINS=['http://localhost','http://3.222.113.228']
