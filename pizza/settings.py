@@ -164,4 +164,4 @@ SWAGGER_SETTINGS = {
         }
     }
 }
-CSRF_TRUSTED_ORIGINS=['http://localhost','http://100.26.112.131']
+CSRF_TRUSTED_ORIGINS=['http://localhost','http://3.95.174.141']
