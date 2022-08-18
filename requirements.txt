@@ -46,3 +46,4 @@ django
 gunicorn
 django-cors-headers
 uwsgi
+django-cors-headers
